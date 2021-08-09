@@ -1,0 +1,131 @@
+:root {
+    --font-text: 'Montserrat', sans-serif;
+    --gray-1: #E5E5E5;
+    --gray-2: #A9A9A9;
+    --gray-3: #BDBDBD;
+    --gray-4: #4E5150;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 800px;
+    overflow-x: hidden;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    font-family: var(--font-text);
+    color: var(--gray-2);
+    margin: auto;
+}
+
+main {
+    margin: 0 auto;
+}
+
+.user-hero {
+    margin: 1rem 0;
+}
+
+.user-hero > * {
+    display: block;
+    margin: .5rem auto;
+    text-align: center;
+}
+
+.user-hero img{
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+}
+
+.user-hero h1 {
+    color: var(--gray-4);
+    font-weight: 300;
+}
+
+.user-hero h4 {
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.user-statistics {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.statistics-item {
+    width: 100px;
+    height: 70px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray-1);
+}
+
+.statistics-item .count {
+    font-weight: 500;
+    color: var(--gray-4);
+}
+
+.user-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2rem 0;
+    grid-gap: 1rem;
+}
+
+
+.item-image {
+    width: 100%;
+    border-radius: 20px;   
+}
+
+.item-image:nth-child(2) {
+    grid-column: span 2;
+}
+
+.item-image:nth-child(3) {
+    grid-column: span 2;
+}
+
+.item-image:nth-child(4) {
+    grid-row: span 2;
+}
+
+footer {
+    margin: 1rem auto;
+    text-align: center;
+    font-family: 'Montserrat';
+    text-align: center;
+    font-size: 15px;
+    font-weight: 100;
+    color: #888888
+}
+
+footer span {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+@media screen AND (min-width: 800px) {
+    .user-hero img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .user-statistics {
+        justify-content: center;
+    }
+
+    .statistics-item {
+        margin: 0 1.5rem;        
+    }
+}
+
